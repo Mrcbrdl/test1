@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Le Monde: Article 1 on Le Monde - Énergie",
+    "link": "https://example.com/1",
+    "source": "Le Monde - Énergie",
+    "date": "2026-04-13T19:27:43.802750"
+  },
+  {
+    "title": "Le Monde: Article 2 on Le Monde - Énergie",
+    "link": "https://example.com/2",
+    "source": "Le Monde - Énergie",
+    "date": "2026-04-13T19:27:43.802757"
+  },
+  {
+    "title": "The Guardian: Article 1 on The Guardian - Environment",
+    "link": "https://example.com/3",
+    "source": "The Guardian - Environment",
+    "date": "2026-04-13T19:27:43.802774"
+  },
+  {
+    "title": "The Guardian: Article 2 on The Guardian - Environment",
+    "link": "https://example.com/4",
+    "source": "The Guardian - Environment",
+    "date": "2026-04-13T19:27:43.802776"
+  },
+  {
+    "title": "Tweet 1 from @EDFofficiel on @EDFofficiel",
+    "link": "https://twitter.com/1",
+    "source": "@EDFofficiel",
+    "date": "2026-04-13T19:27:43.802791"
+  },
+  {
+    "title": "Tweet 2 from @EDFofficiel on @EDFofficiel",
+    "link": "https://twitter.com/2",
+    "source": "@EDFofficiel",
+    "date": "2026-04-13T19:27:43.802793"
+  },
+  {
+    "title": "Reddit Post 1 from r/energy on r/energy",
+    "link": "https://reddit.com/1",
+    "source": "r/energy",
+    "date": "2026-04-13T19:27:43.802807"
+  },
+  {
+    "title": "Reddit Post 2 from r/energy on r/energy",
+    "link": "https://reddit.com/2",
+    "source": "r/energy",
+    "date": "2026-04-13T19:27:43.802809"
+  }
+]
