@@ -1,50 +1,40 @@
-[
-  {
-    "title": "Le Monde: Article 1 on Le Monde - Énergie",
-    "link": "https://example.com/1",
-    "source": "Le Monde - Énergie",
-    "date": "2026-04-13T19:27:43.802750"
-  },
-  {
-    "title": "Le Monde: Article 2 on Le Monde - Énergie",
-    "link": "https://example.com/2",
-    "source": "Le Monde - Énergie",
-    "date": "2026-04-13T19:27:43.802757"
-  },
-  {
-    "title": "The Guardian: Article 1 on The Guardian - Environment",
-    "link": "https://example.com/3",
-    "source": "The Guardian - Environment",
-    "date": "2026-04-13T19:27:43.802774"
-  },
-  {
-    "title": "The Guardian: Article 2 on The Guardian - Environment",
-    "link": "https://example.com/4",
-    "source": "The Guardian - Environment",
-    "date": "2026-04-13T19:27:43.802776"
-  },
-  {
-    "title": "Tweet 1 from @EDFofficiel on @EDFofficiel",
-    "link": "https://twitter.com/1",
-    "source": "@EDFofficiel",
-    "date": "2026-04-13T19:27:43.802791"
-  },
-  {
-    "title": "Tweet 2 from @EDFofficiel on @EDFofficiel",
-    "link": "https://twitter.com/2",
-    "source": "@EDFofficiel",
-    "date": "2026-04-13T19:27:43.802793"
-  },
-  {
-    "title": "Reddit Post 1 from r/energy on r/energy",
-    "link": "https://reddit.com/1",
-    "source": "r/energy",
-    "date": "2026-04-13T19:27:43.802807"
-  },
-  {
-    "title": "Reddit Post 2 from r/energy on r/energy",
-    "link": "https://reddit.com/2",
-    "source": "r/energy",
-    "date": "2026-04-13T19:27:43.802809"
-  }
-]
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy Info Hub - Test</title>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div x-data="hub()" class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold mb-6">Energy Info Hub - Version Test</h1>
+
+    <!-- Liste des articles -->
+    <div class="grid grid-cols-1 gap-4">
+      <template x-for="article in articles" :key="article.link">
+        <div class="bg-white p-4 rounded shadow">
+          <h3 class="text-lg font-semibold" x-text="article.title"></h3>
+          <div class="flex justify-between items-center mt-2">
+            <span class="text-sm text-gray-500" x-text="article.source"></span>
+            <a :href="article.link" target="_blank" class="text-blue-500">Lire plus</a>
+          </div>
+        </div>
+      </template>
+    </div>
+  </div>
+
+  <script>
+    function hub() {
+      return {
+        articles: [],
+        async init() {
+          const response = await fetch('aggregated_articles.json');
+          this.articles = await response.json();
+        }
+      };
+    }
+  </script>
+</body>
+</html>
